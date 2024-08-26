@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Chain Portfolio Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>On-Chain Portfolio Manager</h1>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="accountInfo" style="display:none;">
+            <p>Account: <span id="accountAddress"></span></p>
+            <p>Network: <span id="network"></span></p>
+            <p>ETH Balance: <span id="ethBalance"></span></p>
+            <p>USDC Balance: <span id="usdcBalance"></span></p>
+            <p>USDT Balance: <span id="usdtBalance"></span></p>
+            <div class="transaction-form">
+                <h2>Transfer Assets</h2>
+                <label for="asset">Asset:</label>
+                <select id="asset">
+                    <option value="ETH">ETH</option>
+                    <option value="USDC">USDC</option>
+                    <option value="USDT">USDT</option>
+                </select>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="0.0">
+                <label for="recipient">Recipient Address:</label>
+                <input type="text" id="recipient" placeholder="0x...">
+                <button id="sendTransaction">Send Transaction</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.3.4/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
